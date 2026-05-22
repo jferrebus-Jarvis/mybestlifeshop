@@ -1,0 +1,3380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Best Life — Bags & Accessories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark:       #8E6A6A;
+      --mid:        #C19595;
+      --light:      #DDAFAF;
+      --blush:      #F7EBE8;
+      --warm-white: #FDF8F6;
+      --text-dark:  #3D2323;
+      --text-mid:   #7A5050;
+      --border:     rgba(193,149,149,0.22);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Jost',sans-serif; background:var(--warm-white); color:var(--text-dark); }
+
+    /* TOP BAR */
+    .topbar { background:var(--dark); color:rgba(255,255,255,0.9); text-align:center; padding:10px 20px; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; }
+    .topbar span { color:var(--light); font-weight:600; }
+
+    /* NAV */
+    nav { position:sticky; top:0; z-index:999; background:var(--warm-white); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 60px; height:76px; }
+    .nav-logo { display:flex; align-items:center; gap:14px; }
+    .nav-logo img { height:60px; width:60px; object-fit:contain; border-radius:0; }
+    .nav-logo-text .brand { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; letter-spacing:1px; color:var(--text-dark); }
+    .nav-logo-text .sub { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--mid); font-weight:400; }
+    .nav-links { display:flex; gap:36px; list-style:none; align-items:center; }
+    .nav-links a { color:var(--text-mid); text-decoration:none; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--dark); }
+    .nav-cta { background:var(--dark) !important; color:white !important; padding:10px 24px; }
+
+    /* HERO */
+    .hero { min-height:94vh; background:var(--blush); display:grid; grid-template-columns:1fr 1fr; align-items:center; overflow:hidden; }
+    .hero-text { padding:80px 60px 80px 80px; }
+    .hero-eyebrow { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--mid); margin-bottom:28px; display:flex; align-items:center; gap:14px; }
+    .hero-eyebrow::before { content:''; display:block; width:40px; height:1px; background:var(--mid); }
+    .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(48px,5.5vw,78px); font-weight:300; line-height:1.05; color:var(--text-dark); margin-bottom:30px; }
+    .hero h1 em { font-style:italic; color:var(--dark); }
+    .hero-desc { font-size:15px; color:var(--text-mid); line-height:1.95; font-weight:300; margin-bottom:48px; max-width:400px; }
+    .hero-btns { display:flex; gap:16px; flex-wrap:wrap; }
+    .btn-fill { background:var(--dark); color:white; padding:14px 38px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; }
+    .btn-fill:hover { background:var(--text-dark); }
+    .btn-ghost { background:transparent; color:var(--text-dark); padding:14px 38px; font-size:11px; font-weight:400; letter-spacing:2px; text-transform:uppercase; text-decoration:none; border:1px solid var(--mid); transition:all 0.2s; }
+    .btn-ghost:hover { border-color:var(--dark); color:var(--dark); }
+
+    /* HERO VISUAL */
+    .hero-visual { height:94vh; position:relative; overflow:hidden; background:linear-gradient(160deg, #F7EBE8 0%, #DDAFAF 50%, #C19595 100%); display:flex; align-items:center; justify-content:center; }
+    .hero-visual::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, transparent 70%); }
+    .hero-logo-big { width:65%; object-fit:contain; position:relative; z-index:1; filter:drop-shadow(0 20px 50px rgba(61,35,35,0.15)); }
+    .hero-badge { position:absolute; bottom:44px; left:44px; background:white; padding:20px 28px; box-shadow:0 8px 30px rgba(61,35,35,0.1); border-left:3px solid var(--mid); }
+    .hero-badge p { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--text-mid); margin-bottom:4px; }
+    .hero-badge strong { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:500; color:var(--dark); }
+
+    /* TICKER */
+    .ticker { background:var(--dark); padding:12px 0; overflow:hidden; white-space:nowrap; }
+    .ticker-track { display:inline-block; animation:ticker 26s linear infinite; }
+    .ticker-track span { font-size:10px; letter-spacing:3.5px; text-transform:uppercase; color:rgba(255,255,255,0.82); font-weight:400; margin:0 32px; }
+    @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ABOUT STRIP */
+    .about-strip { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--warm-white); }
+    .about-item { padding:52px 44px; text-align:center; border-right:1px solid var(--border); }
+    .about-item:last-child { border-right:none; }
+    .about-item .icon { font-size:26px; margin-bottom:16px; display:block; }
+    .about-item h3 { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:500; margin-bottom:10px; color:var(--text-dark); }
+    .about-item p { font-size:13px; color:var(--text-mid); line-height:1.75; font-weight:300; }
+
+    /* SHOP */
+    .shop { padding:110px 70px; background:var(--blush); }
+    .section-label { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--mid); margin-bottom:12px; display:block; }
+    .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,4vw,50px); font-weight:300; color:var(--text-dark); line-height:1.15; }
+    .section-title em { font-style:italic; color:var(--dark); }
+    .shop-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:60px; }
+    .shop-header a { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-mid); text-decoration:none; border-bottom:1px solid var(--mid); padding-bottom:2px; transition:color 0.2s; }
+    .shop-header a:hover { color:var(--dark); }
+    .shop-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; }
+    .product-card { background:var(--warm-white); cursor:pointer; transition:transform 0.3s,box-shadow 0.3s; border:1px solid var(--border); }
+    .product-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(61,35,35,0.1); }
+    .product-img { aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; font-size:88px; position:relative; overflow:hidden; }
+    .product-tag { position:absolute; top:14px; left:14px; background:var(--dark); color:white; font-size:9px; letter-spacing:2px; text-transform:uppercase; padding:4px 12px; font-weight:500; }
+    .product-tag.preloved { background:var(--mid); color:white; }
+    .product-info { padding:18px 18px 22px; border-top:1px solid var(--border); }
+    .product-info h3 { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:400; margin-bottom:4px; color:var(--text-dark); }
+    .product-info .product-type { font-size:10px; color:var(--text-mid); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+    .product-info .product-bottom { display:flex; align-items:center; justify-content:space-between; }
+    .product-info .price { font-size:12px; font-weight:500; color:var(--mid); }
+    .product-info .shop-btn { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--dark); text-decoration:none; border-bottom:1px solid var(--mid); padding-bottom:1px; font-weight:500; }
+
+    /* STORY */
+    .story-wrap { background:var(--warm-white); padding:120px 70px; }
+    .story { display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; max-width:1200px; margin:0 auto; }
+    .story-visual { background:linear-gradient(160deg, #F7EBE8, #DDAFAF); aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+    .story-visual img { width:72%; object-fit:contain; filter:drop-shadow(0 10px 30px rgba(61,35,35,0.12)); }
+    .story-visual .quote-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(61,35,35,0.8)); padding:48px 32px 32px; }
+    .story-visual .quote-overlay p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:rgba(255,255,255,0.92); line-height:1.65; }
+    .story-text p { font-size:15px; color:var(--text-mid); line-height:1.95; font-weight:300; margin-bottom:18px; }
+    .story-btns { display:flex; gap:14px; margin-top:40px; flex-wrap:wrap; }
+
+    /* TESTIMONIALS */
+    .testimonials { padding:110px 70px; background:var(--dark); }
+    .testimonials .section-label { color:var(--light); text-align:center; }
+    .testimonials .section-title { color:white; text-align:center; margin-bottom:64px; }
+    .testimonials .section-title em { color:var(--light); }
+    .testi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; max-width:1100px; margin:0 auto; }
+    .testi-card { background:rgba(255,255,255,0.08); border:1px solid rgba(221,175,175,0.25); padding:36px; }
+    .testi-stars { color:var(--light); letter-spacing:3px; font-size:12px; margin-bottom:18px; }
+    .testi-card p { font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; color:rgba(255,255,255,0.88); line-height:1.75; margin-bottom:20px; }
+    .testi-author { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--light); }
+
+    /* FINAL CTA */
+    .final-cta { padding:130px 40px; text-align:center; background:var(--blush); }
+    .final-cta h2 { margin-bottom:18px; }
+    .final-cta p { font-size:15px; color:var(--text-mid); max-width:460px; margin:0 auto 52px; line-height:1.9; font-weight:300; }
+    .final-cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+    /* FOOTER */
+    footer { background:var(--text-dark); padding:52px 70px 36px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+    .footer-left { display:flex; align-items:center; gap:16px; }
+    .footer-left img { height:48px; width:48px; border-radius:50%; }
+    .footer-brand { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:white; }
+    .footer-brand span { color:var(--light); font-size:11px; display:block; font-family:'Jost',sans-serif; margin-top:2px; letter-spacing:1.5px; text-transform:uppercase; }
+    footer nav a { color:rgba(255,255,255,0.3); text-decoration:none; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin-left:28px; transition:color 0.2s; }
+    footer nav a:hover { color:var(--light); }
+    .footer-copy { width:100%; text-align:center; font-size:11px; color:rgba(255,255,255,0.18); letter-spacing:1px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.06); margin-top:24px; }
+    .footer-copy a { color:var(--light); text-decoration:none; }
+
+    /* MOBILE */
+    @media(max-width:900px){
+      nav { padding:0 20px; } .nav-links { display:none; }
+      .hero { grid-template-columns:1fr; } .hero-text { padding:60px 24px; }
+      .hero-visual { height:70vw; min-height:320px; }
+      .about-strip { grid-template-columns:1fr; } .about-item { border-right:none; border-bottom:1px solid var(--border); }
+      .shop,.story-wrap,.testimonials,.final-cta { padding:64px 24px; }
+      .story { grid-template-columns:1fr; gap:40px; } .story-visual { display:none; }
+      footer { flex-direction:column; padding:40px 24px 24px; }
+      footer nav { margin-top:8px; } footer nav a { margin-left:0; margin-right:20px; }
+    }
+  
+    .filter-bar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+    .filter-btn { background:transparent; border:1px solid var(--border); color:var(--text-mid); padding:8px 18px; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; font-family:'Jost',sans-serif; }
+    .filter-btn.active, .filter-btn:hover { background:var(--dark); color:white; border-color:var(--dark); }
+    .product-img { aspect-ratio:3/4; overflow:hidden; position:relative; background:var(--blush); }
+    .product-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .product-card:hover .product-img img { transform:scale(1.04); }
+    .product-card.hidden { display:none; }
+
+  
+    .filter-bar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+    .filter-btn { background:transparent; border:1px solid var(--border); color:var(--text-mid); padding:8px 18px; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; font-family:'Jost',sans-serif; border-radius:0; }
+    .filter-btn.active, .filter-btn:hover { background:var(--dark); color:white; border-color:var(--dark); }
+    .product-img { aspect-ratio:3/4; overflow:hidden; position:relative; background:var(--blush); }
+    .product-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .product-card:hover .product-img img { transform:scale(1.04); }
+    .product-card.hidden { display:none; }
+    .shop-insta-link { color:var(--text-mid); font-size:13px; text-decoration:none; letter-spacing:1px; }
+    .shop-insta-link:hover { color:var(--dark); }
+
+  
+    .buy-btn {
+      background: linear-gradient(135deg, #8E6A6A, #C19595);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.5px;
+      width: 100%;
+    }
+    .buy-btn:hover {
+      background: linear-gradient(135deg, #7a5858, #a87f7f);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(142,106,106,0.4);
+    }
+    .buy-btn:active { transform: translateY(0); }
+    .buy-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    /* Checkout modal overlay */
+    #checkout-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    #checkout-overlay.active { display: flex; }
+    #checkout-modal {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+    #checkout-modal h3 { color: #8E6A6A; margin-bottom: 8px; }
+    #checkout-modal p { color: #666; margin-bottom: 20px; font-size: 0.9rem; }
+    .checkout-price { font-size: 2rem; font-weight: 700; color: #8E6A6A; margin: 12px 0; }
+    .checkout-confirm-btn {
+      background: linear-gradient(135deg, #8E6A6A, #C19595);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .checkout-cancel-btn {
+      background: none;
+      border: 1px solid #ddd;
+      padding: 10px 24px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #999;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Free shipping on orders $75+ &nbsp;·&nbsp; <span>New + Preloved Bags Now Available</span></div>
+
+  <nav>
+    <div class="nav-logo">
+      <img src="https://base44.app/api/apps/6a07ce0bd5944f632f6f429a/files/mp/public/6a07ce0bd5944f632f6f429a/1ba11f8ce_my_best_life_logo.png" alt="My Best Life">
+      <div class="nav-logo-text">
+        <span class="brand">My Best Life</span>
+        <span class="sub">Bags & Accessories</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="https://www.instagram.com/mybestlife.store/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.instagram.com/mybestlife.store/" target="_blank" class="nav-cta">@mybestlife.store</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">New + Preloved Collection</p>
+      <h1>Your Soft Life<br>Starts with the<br><em>Right Bag</em></h1>
+      <p class="hero-desc">Designer vibes, spend smart. Curated handbags & accessories for the woman living her best life — without the designer price tag.</p>
+      <div class="hero-btns">
+        <a href="https://www.instagram.com/mybestlife.store/" target="_blank" class="btn-fill">Shop on Instagram</a>
+        <a href="https://www.instagram.com/mybestlife.store/" target="_blank" class="btn-ghost">Follow on Instagram</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="hero-logo-big" src="https://base44.app/api/apps/6a07ce0bd5944f632f6f429a/files/mp/public/6a07ce0bd5944f632f6f429a/1ba11f8ce_my_best_life_logo.png" alt="My Best Life">
+      <div class="hero-badge">
+        <p>Now Available</p>
+        <strong>New Arrivals ✦</strong>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>New Arrivals</span><span>&nbsp;·&nbsp;</span><span>Preloved Gems</span><span>&nbsp;·&nbsp;</span>
+      <span>Designer Vibes</span><span>&nbsp;·&nbsp;</span><span>Your Soft Life</span><span>&nbsp;·&nbsp;</span>
+      <span>Shop My Best Life</span><span>&nbsp;·&nbsp;</span><span>Free Shipping $75+</span><span>&nbsp;·&nbsp;</span>
+      <span>New Arrivals</span><span>&nbsp;·&nbsp;</span><span>Preloved Gems</span><span>&nbsp;·&nbsp;</span>
+      <span>Designer Vibes</span><span>&nbsp;·&nbsp;</span><span>Your Soft Life</span><span>&nbsp;·&nbsp;</span>
+      <span>Shop My Best Life</span><span>&nbsp;·&nbsp;</span><span>Free Shipping $75+</span><span>&nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <div class="about-strip">
+    <div class="about-item"><span class="icon">✦</span><h3>Curated with Love</h3><p>Every bag is hand-selected for style, quality, and that "I need it" feeling.</p></div>
+    <div class="about-item"><span class="icon">♻</span><h3>New + Preloved</h3><p>Fresh arrivals alongside gently loved gems — designer looks for less.</p></div>
+    <div class="about-item"><span class="icon">✉</span><h3>Personal Touch</h3><p>DM us on Instagram and we'll help you find the perfect bag for any occasion.</p></div>
+  </div>
+
+      <section class="shop" id="shop">
+    <div class="shop-header">
+      <div><span class="section-label">The Collection</span><h2 class="section-title">Shop Her <em>Bags</em></h2></div>
+      <a href="https://www.instagram.com/mybestlifeshop" target="_blank" class="shop-insta-link">@mybestlifeshop on Instagram →</a>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All (249)</button>
+      <button class="filter-btn" data-filter="tote">Totes (52)</button>
+      <button class="filter-btn" data-filter="clutch">Clutches (24)</button>
+      <button class="filter-btn" data-filter="crossbody">Crossbody (55)</button>
+      <button class="filter-btn" data-filter="shoulder">Shoulder (55)</button>
+      <button class="filter-btn" data-filter="coach">Coach (8)</button>
+      <button class="filter-btn" data-filter="michael kors">MK (6)</button>
+      <button class="filter-btn" data-filter="beaded">Beaded (21)</button>
+      <button class="filter-btn" data-filter="woven">Woven/Straw (21)</button>
+    </div>
+
+    <div class="shop-grid" id="shopGrid">
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/05/18/6a0b5fa8ff0320916dd90363/m_6a0b607bb09b7c85b060cd5c.jpg" alt="Nina Gold Crystal Mesh Evening Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Nina Gold Crystal Mesh Evening Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/4gMbJ31O58Zc18u37d1cl1A" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/05/18/6a0b5d5421bd42e251d8aeb3/m_6a0b5d5f2c9e444431273b8c.jpg" alt="Patricia Nash Meka leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Patricia Nash Meka leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$125</span>
+            <a href="https://buy.stripe.com/14AcN7csJ7V82cyePV1cl1B" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b472baa9a4482e93513eae/m_69b472c6dc3b468f21608b7c.jpg" alt="Aqua Tan Woven Tote with Blue Scarf Detail / The white lotus Edition" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Aqua Tan Woven Tote with Blue Scarf Detail / The white lotus Edition</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/3cI3cx2S92AOdVgcHN1cl1C" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b857fc44ad4d895346dbc0/m_69b85870ff353ad993c9f3df.jpg" alt="Style & Co Woven straw tote with round top handles" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co Woven straw tote with round top handles</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/8x26oJ3Wd0sG8AW4bh1cl1D" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b996cfc71ba1d2935d23a3/m_69b996e521bd429a49506c2b.jpg" alt="Woven Straw Tote Bag - Tan, Pink, and Red" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Woven Straw Tote Bag - Tan, Pink, and Red</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/28E5kF50h0sG18u6jp1cl1E" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b98c43d8024c65c8a796a1/m_69b98c4d9936d610b3ca8f5d.jpg" alt="ON-2-NO Pink and Blue Beaded Clutch and Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>ON-2-NO Pink and Blue Beaded Clutch and Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/6oUcN79gx6R43gC8rx1cl1F" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="beaded">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d41bbddc3b4638ef7df8ac/m_69d41bda4206441a0d078bbb.jpg" alt="ON·34TH Navy and Peach Beaded Wristlet Pouch with Tassel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>ON·34TH Navy and Peach Beaded Wristlet Pouch with Tassel</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/28E8wR50h7V89F0dLR1cl1H" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="beaded">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b4aebcfe4c68ee61ce14b7/m_69b4aec2955383c79c40ba97.jpg" alt="Elegant Black Beaded Coin purse with Crystal Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Black Beaded Coin purse with Crystal Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/6oU8wR64ldfs2cybDJ1cl1J" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/21/69bedfff243dae8a8fc26ba1/m_69bee045fe4c68e34db49c2b.jpg" alt="Elegant Black Beaded Shoulder Bag and coin purse" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Black Beaded Shoulder Bag and coin purse</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/dRm00l8ct7V84kGdLR1cl1K" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/10/69d9199e49e17b9110570d7d/m_69d919cea95105eb49554e57.jpg" alt="Beaded Coral and Navy Shoulder Hobo Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Beaded Coral and Navy Shoulder Hobo Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/00wdRb0K11wKbN8gY31cl1M" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b98d6224d2e74f10fb474d/m_69b98d6e21b801840a53d8ef.jpg" alt="Elegant Beaded Clutch and Wristlet Set" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Beaded Clutch and Wristlet Set</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/fZu6oJ8ctcbo2cy6jp1cl1N" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad1ffb09b7ce706ef0c16/m_69bad21124d2e71050044272.jpg" alt="Style & Co. Beige and Tan Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Beige and Tan Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/eVq14p64l1wKg3ofTZ1cl1P" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/10/69d91778bd4ce32842b21294/m_69d91781bedd34e0f3b3b16d.jpg" alt="Style & Co. Woven Cream Shoulder Bag with Brown Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Woven Cream Shoulder Bag with Brown Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/dRm7sNakBcbo18udLR1cl1Q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc2e31a95105bb5c81a064/m_69bc2e4021bd427f3b2bcc3d.jpg" alt="INC International Concepts Black Net Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Black Net Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/cNi00l78pgrE6sObDJ1cl1S" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/13/69dd257aed788d3d4b4a0ee5/m_69dd257aed788d3d4b4a0ee6.jpg" alt="Style & Co. Multicolor Woven Crossbody with Tan Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Multicolor Woven Crossbody with Tan Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/4gM8wR3Wd4IWaJ4bDJ1cl1T" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/20/69987e6bb14a06aa783260cc/m_69987e77d7555d45ca798738.jpg" alt="Elegant Woven Clutch in Cream and Tan" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Woven Clutch in Cream and Tan</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/5kQ3cx2S9cboeZkazF1cl1U" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/6997768be9c77dc2789e540f/m_6997769424b20bf4d456760c.jpg" alt="Woven Beige and Gray Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Woven Beige and Gray Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/00wfZj9gx6R4cRcgY31cl1V" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d68f65ed788df9623e928d/m_69d68f70bd4ce3d9da54c595.jpg" alt="Nanette Lepore Straw Tote with White Trim and Pink Scarf" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Nanette Lepore Straw Tote with White Trim and Pink Scarf</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/5kQeVf64ldfsaJ42391cl1W" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d6a5e721bd4212919bdcec/m_69d6a5efff353a3ee2e7eddf.jpg" alt="Crystal-Embellished Straw Clutch in Natural Straw" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Crystal-Embellished Straw Clutch in Natural Straw</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/4gM8wR8cta3g18udLR1cl1X" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/05/04/69f8ea4449e17bd57a12d13e/m_69f8ea4449e17bd57a12d13f.jpg" alt="Aqua Multicolor Woven Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Aqua Multicolor Woven Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/8x27sNfEV0sG9F09vB1cl1Y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb91e249e17b2d8e578120/m_69eb91ef243dae907beefb19.jpg" alt="I.N.C Zavaa Straw Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>I.N.C Zavaa Straw Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/4gM6oJfEV5N0cRccHN1cl1Z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2b2ab21bd42559b292c2f/m_69c2b2bbb09b7c4d36656f40.jpg" alt="Style & Co. Two-Tone Woven Straw Tote - Natural & Brown" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Two-Tone Woven Straw Tote - Natural & Brown</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/dRmaEZdwN0sGaJ4azF1cl20" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7f7d8ff0320e8d3baae13/m_69d7f8257ac62929bc8da0ab.jpg" alt="INC International Concepts Knotted Macrame Shoulder Bag in Tan" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Knotted Macrame Shoulder Bag in Tan</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/fZu3cx1O52AOeZkbDJ1cl21" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/21/69bef2d05919e0576b0503d5/m_69bef311e9c77dd1424220c5.jpg" alt="Coach Pebble Light Beige Leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Pebble Light Beige Leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$185</span>
+            <a href="https://buy.stripe.com/7sY4gB8ctfnA18ubDJ1cl22" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69a8b88849a3734f58763/m_69d69ab12326c891c878bb36.jpg" alt="Michael Kors Camel/Tan Raven Leather Shoulder Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Camel/Tan Raven Leather Shoulder Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$150</span>
+            <a href="https://buy.stripe.com/14A3cxdwNfnAcRcdLR1cl23" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d6acbfd7555dec9b978ec0/m_69d6acde420644ba21135cd1.jpg" alt="Michael Kors Beige MK Logo Shoulder Bag with Brown Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Beige MK Logo Shoulder Bag with Brown Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$150</span>
+            <a href="https://buy.stripe.com/fZu9AV0K14IWg3o8rx1cl24" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/18/69e3c439bedd3474701bf989/m_69e3c476dc3b465e19a2a800.jpg" alt="DonnaKaran New York Amagansett Soft-Rolled Leather Satchel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>DonnaKaran New York Amagansett Soft-Rolled Leather Satchel</h3>
+          <div class="product-bottom">
+            <span class="price">$200</span>
+            <a href="https://buy.stripe.com/4gM3cx2S9fnAg3ocHN1cl25" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/18/69e3c2755df8e7360c50e0dd/m_69e3c27f7ac629c466eba822.jpg" alt="DKNY Brown Suede & Pebbled Leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>DKNY Brown Suede & Pebbled Leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/5kQ8wRakB1wK8AW8rx1cl26" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c56c041986c2b8d03646cc/m_69c56cc9ff353a48a4958752.jpg" alt="DKNY Beige/Tan Drawstring Bucket Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>DKNY Beige/Tan Drawstring Bucket Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$125</span>
+            <a href="https://buy.stripe.com/9B6bJ3fEV4IW4kGbDJ1cl27" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5c0a74a072b2ff0aa2896/m_69b5c0ba9f034cd98483cfda.jpg" alt="Coach Bella Dove Gray Leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Bella Dove Gray Leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$250</span>
+            <a href="https://buy.stripe.com/9B6dRbakBa3g18u9vB1cl28" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/23/69c1a9a2b6af9259b2de10a1/m_69c1a9a2b6af9259b2de10a2.jpg" alt="VEE Collective Black Medium Porter Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Black Medium Porter Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$200</span>
+            <a href="https://buy.stripe.com/cNi5kFdwN4IW04q6jp1cl29" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="coach">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac68a01493770d23a71c84/m_69ac68a8f59cc4ee989397a7.jpg" alt="Coach Tabby 26 With Signature Canvas" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Tabby 26 With Signature Canvas</h3>
+          <div class="product-bottom">
+            <span class="price">$260</span>
+            <a href="https://buy.stripe.com/8x24gB64l0sG2cy0Z51cl2a" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/16/69e105e29936d684b4062700/m_69e105e93509d1d4cc9c76d6.jpg" alt="Coach Legay Pebbled Leather Tote with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Legay Pebbled Leather Tote with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$170</span>
+            <a href="https://buy.stripe.com/aFa4gBboF4IW9F02391cl2b" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="coach">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c44e5644ad4da49b20939c/m_69c44e63d8024cf55248d024.jpg" alt="Coach Legacy In Colorblock Leather Carryall 28" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Legacy In Colorblock Leather Carryall 28</h3>
+          <div class="product-bottom">
+            <span class="price">$300</span>
+            <a href="https://buy.stripe.com/cNi8wRfEVgrE04q37d1cl2c" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3d087bedd34ade79f69c1/m_69ef98564a072bb8d432f001.jpg" alt="Coach Canvas Rainbow Tote Bag in Beige" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Canvas Rainbow Tote Bag in Beige</h3>
+          <div class="product-bottom">
+            <span class="price">$250</span>
+            <a href="https://buy.stripe.com/5kQeVffEVb7k7wSfTZ1cl2d" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/15/69e016465df8e735b9a76918/m_69ef940a850012449d60a50c.jpg" alt="Coach Swing Zip  Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Coach Swing Zip  Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$320</span>
+            <a href="https://buy.stripe.com/cNi28takB3ES04qcHN1cl2f" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc5127dc3b467e4f124a4e/m_69bc520bc71ba182ab066ba5.jpg" alt="VEE Collective Quilted Black and Cream Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Quilted Black and Cream Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$250</span>
+            <a href="https://buy.stripe.com/7sY28t2S94IWbN89vB1cl2g" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b6322e310f1cca6f0dcb0e/m_69b63232bd4ce3322c4f34d5.jpg" alt="VEE Collective Elegant Cream Tote Bag with Brown Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Elegant Cream Tote Bag with Brown Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$245</span>
+            <a href="https://buy.stripe.com/dRmeVf9gx8Zc7wS0Z51cl2h" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5c4c9a9a4482e935ab164/m_69b5c4d99b215872c4fc8867.jpg" alt="VEE Collective Porter Vanity Case" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Porter Vanity Case</h3>
+          <div class="product-bottom">
+            <span class="price">$125</span>
+            <a href="https://buy.stripe.com/5kQ4gBboF2AO4kG7nt1cl2i" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5c80aff0320e2dc1ad907/m_69b5c85dbedd34966ba03eaa.jpg" alt="VEE Collective Leopard Print Clutch with Black Accent" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Leopard Print Clutch with Black Accent</h3>
+          <div class="product-bottom">
+            <span class="price">$140</span>
+            <a href="https://buy.stripe.com/14A5kF64l7V88AW7nt1cl2j" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5d15d3509d137678e8aff/m_69b5d16e21bd4259d6e04e67.jpg" alt="VEE Collective Green Porter Messenger Mini" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Green Porter Messenger Mini</h3>
+          <div class="product-bottom">
+            <span class="price">$140</span>
+            <a href="https://buy.stripe.com/9B6dRb64lgrE5oK8rx1cl2k" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b630adf59cc43b1e434927/m_69b630b2dbd8f03792a76f09.jpg" alt="VEE Collective Ivy Plaid Micro Porter Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Ivy Plaid Micro Porter Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$100</span>
+            <a href="https://buy.stripe.com/fZucN7dwNb7k7wS7nt1cl2l" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5d324ff0320fcfb1b4b94/m_69b5d32ab6af92b902bc5c23.jpg" alt="VEE Collective Ivy plaid Small Porter Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Ivy plaid Small Porter Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$169</span>
+            <a href="https://buy.stripe.com/6oU5kFgIZcbobN82391cl2m" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5c964f59cc4dbdb3f8905/m_69b5c9694a072b3136aa87d7.jpg" alt="VEE Collective Deep Sea Porter Basque Clutch" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE Collective Deep Sea Porter Basque Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$160</span>
+            <a href="https://buy.stripe.com/4gMdRbfEVgrE6sO5fl1cl2n" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/28/69f0c1a9ed788d8567af5fc7/m_69f0c1e424b20b3cbf8b11fe.jpg" alt="VEE collective PORTER TOTE MEDIUM SILVER GREY" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>VEE collective PORTER TOTE MEDIUM SILVER GREY</h3>
+          <div class="product-bottom">
+            <span class="price">$130</span>
+            <a href="https://buy.stripe.com/9B64gB0K17V8dVg9vB1cl2o" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed5b051986c29b7e6fbcbf/m_69ed5b0e006e4304ef9d13e0.jpg" alt="Anne Klein Black East/West Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Anne Klein Black East/West Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/cNi7sN9gx5N0g3o37d1cl2p" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac856f24d2e7ec4f598d2a/m_69ac860ad8024ce59a51dbdd.jpg" alt="Duxbury Medium Leather Melbourne Satchel Medium Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Duxbury Medium Leather Melbourne Satchel Medium Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$225</span>
+            <a href="https://buy.stripe.com/00w8wRdwNfnA7wS37d1cl2q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac6fcb88849acc9975b7a6/m_69ac6fd1c71ba1971dad2bf4.jpg" alt="RADLEY LONDON Black Leather Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>RADLEY LONDON Black Leather Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$285</span>
+            <a href="https://buy.stripe.com/bJe14p50hdfs3gCbDJ1cl2r" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed4eec850012caab8cf989/m_69ed4ef9fe4c683738bf0767.jpg" alt="INC Bawdii Croc-Embossed Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC Bawdii Croc-Embossed Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/7sY6oJ2S94IWcRcgY31cl2s" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed4daf006e43660e9c87df/m_69ed4dbfa9a448af6624e90b.jpg" alt="Black Leatherette Chain-Handle Crossbody Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Black Leatherette Chain-Handle Crossbody Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$18</span>
+            <a href="https://buy.stripe.com/8x2aEZ0K12AO04q6jp1cl2t" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed4bb33509d118bc50ed21/m_69ed4bbc21b801005ee44433.jpg" alt="Olive Canvas Tote Bag with Brown Leather Handles" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Olive Canvas Tote Bag with Brown Leather Handles</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/14AdRb78p4IW9F0ePV1cl2u" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed3f00ed788dac509e5302/m_69ed3f0be9c77d09e6dc9915.jpg" alt="Calvin Klein Audrey Floral Emboss Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Calvin Klein Audrey Floral Emboss Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/5kQ00lboF7V84kGbDJ1cl2v" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/16/69e10a3bc71ba1ddbaa25548/m_69e10a461986c2a4b74bea59.jpg" alt="Style & Co. Black Braided Flap Leather Backpack" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Black Braided Flap Leather Backpack</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/7sYdRb1O55N06sObDJ1cl2x" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed17a4420644ee5309d00a/m_69ed17b8d8024cf3ee11a34d.jpg" alt="Style&Co Navy Backpack with Front Zip Pocket" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style&Co Navy Backpack with Front Zip Pocket</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/4gMbJ350ha3g04qePV1cl2y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed19592326c86ddf8fdece/m_69ed199eb14a06567a3090a1.jpg" alt="Inc Tollann Quilted Mini Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Inc Tollann Quilted Mini Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/dRm6oJ50h2AO5oK9vB1cl2z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed13eaa95105c96c1139d3/m_69ed13efb6af9286564fe8e7.jpg" alt="Style&Co Women&#39;s Blue Leather Backpack - Sleek Everyday Carry" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style&Co Women&#39;s Blue Leather Backpack - Sleek Everyday Carry</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/cNi4gB1O56R47wS8rx1cl2A" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed0f109f034cf5cf009081/m_69ed0f1c420644ee53096e82.jpg" alt="On 34th Somynn Solid Large Handbag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Somynn Solid Large Handbag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/8x2bJ31O5a3g18u5fl1cl2B" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed059e9f19e2de03322a2f/m_69ed05a7a0dc2b788314b736.jpg" alt="Like dreams Olive Crescent Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Like dreams Olive Crescent Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <a href="https://buy.stripe.com/dRm5kFfEV2AO2cy8rx1cl2C" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb8f29850012e62eb8b53a/m_69eb8f30001542ea2c2c9f21.jpg" alt="Steve Madden Black Quilted Tote with Silver Chain Handles" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Steve Madden Black Quilted Tote with Silver Chain Handles</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/6oUdRb0K1a3g5oKdLR1cl2D" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ece1e49b2158d38725cf96/m_69ece1f09936d650d3a47344.jpg" alt="Inc International Concepts Averry Mesh Crystal Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Inc International Concepts Averry Mesh Crystal Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/bJe00lakB5N0eZk7nt1cl2E" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ece55a2326c84b9e8dc2d9/m_69ece62aa0dc2b78831375fb.jpg" alt="Style&Co Cream Women&#39;s Backpack" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style&Co Cream Women&#39;s Backpack</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/9B6dRbgIZ8Zc9F06jp1cl2F" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d418769b215857c1c38adc/m_69d418c0006e43d942a0c7df.jpg" alt="kate spade Serena Pop Trim Chain Leather Wallet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>kate spade Serena Pop Trim Chain Leather Wallet</h3>
+          <div class="product-bottom">
+            <span class="price">$125</span>
+            <a href="https://buy.stripe.com/6oUfZj9gxgrE8AW7nt1cl2G" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5d5f321b80179ca53b2e7/m_69b5d63fc71ba154e1d2bcf4.jpg" alt="Ralph Lauren Chocolate Leather Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Ralph Lauren Chocolate Leather Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$180</span>
+            <a href="https://buy.stripe.com/9B6cN70K1dfs4kG4bh1cl2H" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac617d2fa054e17bf016d3/m_69ac61859b21585c42c2f0ef.jpg" alt="RADLEY London St Pancras Lane medium open top handle bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>RADLEY London St Pancras Lane medium open top handle bag</h3>
+          <div class="product-bottom">
+            <span class="price">$295</span>
+            <a href="https://buy.stripe.com/6oU4gB8ctgrE04q37d1cl2I" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb976849e17bf8b557b9a0/m_69eb976e420644ac3d828f79.jpg" alt="I.N.C Luci Envelope Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>I.N.C Luci Envelope Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/00wbJ3fEV4IW5oKdLR1cl2J" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb8d35f6035a448f4d56af/m_69eb8d90d8024ca16dd1d5b8.jpg" alt="Badgley Mischka Diana Quilted Travel Weekender Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Badgley Mischka Diana Quilted Travel Weekender Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/00w8wRcsJfnA18ubDJ1cl2K" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/09/6961278efe4c68af48a414c5/m_69612795bdcb04916193f8ca.jpg" alt="Michael Kors Kensington Large White Pebbled Leather Shoulder Bag — Like New" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Kensington Large White Pebbled Leather Shoulder Bag — Like New</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/6oUcN778p0sGdVg6jp1cl2L" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/21/69e7bce5e9c77d5200ed483e/m_69e7bd6ddbd8f03104ceb8af.jpg" alt="On 34th Jasmii Pink Heart-Shaped Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Jasmii Pink Heart-Shaped Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/9B65kFdwNfnAdVggY31cl2M" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69bf7f59cc42588695dd3/m_69d69bfdff353af89be78ad8.jpg" alt="Pink Crochet Tote Bag with Pom Accent" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Pink Crochet Tote Bag with Pom Accent</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/5kQcN7eARb7k3gC2391cl2N" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5d7fdd8024c310979e5cd/m_69b5d85c49e17bae69eee403.jpg" alt="Kate Spade Serena Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Kate Spade Serena Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$135</span>
+            <a href="https://buy.stripe.com/5kQcN764l5N08AW8rx1cl2O" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7d7395df8e7b484c6eb64/m_69d7d757bd4ce36325a8dd3a.jpg" alt="Calvin Klein Light Pink Pebbled Leather Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Calvin Klein Light Pink Pebbled Leather Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/00w6oJcsJdfsdVg9vB1cl2P" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7d177b09b7cbc021c87ce/m_69d7d18644ad4d6fbd46e630.jpg" alt="Pink Tote Bag with Brown Trim and Stud Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Pink Tote Bag with Brown Trim and Stud Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$120</span>
+            <a href="https://buy.stripe.com/aFa6oJ0K18Zc9F06jp1cl2Q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bacf88ff353addf0db7eef/m_69bacfa55919e0fbb261ac30.jpg" alt="Sequin Rose Gold Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Sequin Rose Gold Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/eVq4gBboF0sGcRcazF1cl2R" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/11/69dabcadbd4ce3519ebeb511/m_69dabd1f243dae0ce8a3176f.jpg" alt="INC International Concepts Rose Gold Metallic Pouch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Rose Gold Metallic Pouch</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/3cI5kF50h5N018u6jp1cl2S" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf877149377834acae83b/m_69cbf8d9b7f0acf48c48d61b.jpg" alt="I.N.C Sparkling Pink Crystal Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>I.N.C Sparkling Pink Crystal Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/28E14p64l6R49F037d1cl2T" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac501c1986c2a4571d7d55/m_69ac502488849a416b747ae8.jpg" alt="Jewel Badgley Mischka Vibrant Purple Crystal Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Jewel Badgley Mischka Vibrant Purple Crystal Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$100</span>
+            <a href="https://buy.stripe.com/5kQ00lcsJb7k2cycHN1cl2U" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c56e1d2981af80e8091abc/m_69c56e512981af461e091cfb.jpg" alt="DKNY Burgundy Leather Tote with Logo Charm" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>DKNY Burgundy Leather Tote with Logo Charm</h3>
+          <div class="product-bottom">
+            <span class="price">$100</span>
+            <a href="https://buy.stripe.com/bJecN7eAR2AO6sOcHN1cl2V" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3e3eb24b20b9a71e4affd/m_69d3e46e24b20b8cbae4b4fa.jpg" alt="Style & Co. Plum Leather Crossbody with Gold Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Plum Leather Crossbody with Gold Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/dRmaEZ0K1b7k3gCazF1cl2W" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c56ae9850012d0bb9fb7f8/m_69c56afa5919e00f7502082f.jpg" alt="Women&#39;s Quilted Crossbody Clutch Crossbody in Magenta Purple with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Women&#39;s Quilted Crossbody Clutch Crossbody in Magenta Purple with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/aFa8wRakBb7k7wS8rx1cl2X" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c5642fbdcb047813d583a5/m_69c5657c21b80189e77a8985.jpg" alt="INC International Concepts magenta purple Shoulder Bag with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts magenta purple Shoulder Bag with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/cNi9AV50hfnA2cyfTZ1cl2Y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac6e0ef59cc4707e93ced2/m_69ac6e5ca95105a9f52ef5d1.jpg" alt="Brahmin Deep Red Crocodile Embossed Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Brahmin Deep Red Crocodile Embossed Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$200</span>
+            <a href="https://buy.stripe.com/bJeaEZ64lcbo9F09vB1cl2Z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/16/69e0fad7d7555d666fbed433/m_69e0fad7d7555d666fbed434.jpg" alt="Aqua Light Blue Suede Hobo Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Aqua Light Blue Suede Hobo Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/9B63cxgIZcbo9F0fTZ1cl30" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/69977dcdb6af9241f74d96f2/m_69977dd39f034c32dc910d8b.jpg" alt="Stylish Navy Handbag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Stylish Navy Handbag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/aFaeVf64lfnA18u8rx1cl31" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/15/69b6f3f6e9c77d7b2db045bb/m_69b6f4a7ff03203748236463.jpg" alt="Style & Co. Blue Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Blue Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/fZu6oJeARdfscRc2391cl32" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad42314937793ffa2100e/m_69bad447f6035a273e1dac01.jpg" alt="INC International Concepts Sparkling Navy Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Sparkling Navy Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/14A14pdwN7V8aJ47nt1cl33" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b20c1d9b215886d1e223d8/m_69b20c3ba0dc2be31500761e.jpg" alt="Travelon anti theft Mini asymmetric crossbody Bag" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>Travelon anti theft Mini asymmetric crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/5kQeVfgIZa3g5oKbDJ1cl34" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d68dd1f6035af3576a69ff/m_69d68ddf24d2e7fdf53c4ffc.jpg" alt="True Religion Blue and Cream Striped Canvas Tote with Red Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>True Religion Blue and Cream Striped Canvas Tote with Red Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/14AaEZboFdfs04qcHN1cl35" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7ce99ff032093edb905ba/m_69d7ceb9b6af92e9b599bb49.jpg" alt="On 34th Navy Quilted Crossbody Bag with Blue Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Navy Quilted Crossbody Bag with Blue Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/14AbJ3akB7V8g3oePV1cl36" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7f99f0015421b6696ba88/m_69d7f9b11986c2780205da38.jpg" alt="On 34th Quilted Navy Blue Crossbody Belt Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Quilted Navy Blue Crossbody Belt Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/cNicN72S9grE8AWePV1cl37" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7ff7121b801a3166b9fca/m_69d8010e21bd4268d058d661.jpg" alt="On 34th Dyanne Light Blue Women’s Shoulder Bag - Stylish Everyday Carry" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Dyanne Light Blue Women’s Shoulder Bag - Stylish Everyday Carry</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/9B68wR8ctfnA5oK6jp1cl38" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b62b44420644a7a11655d8/m_69b62b4805deb3e34b2e32bf.jpg" alt="Old trend bucket Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Old trend bucket Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$160</span>
+            <a href="https://buy.stripe.com/eVqeVf50h5N0cRcbDJ1cl39" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/20/6998811c2fa054d908ce13e4/m_699881227ac629d860768100.jpg" alt="Green Women&#39;s Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Green Women&#39;s Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/3cI6oJ2S92AO9F05fl1cl3a" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bacc73fe4c681aae49a49e/m_69bacd02b9449167ca1f20ea.jpg" alt="Elegant Olive Green Woven Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Olive Green Woven Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$38</span>
+            <a href="https://buy.stripe.com/fZu28tfEV4IWdVggY31cl3b" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/22/69c04814b6af92372ed31345/m_69c0482c9f034c71660a6290.jpg" alt="Olive Green Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Olive Green Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/9B614pakBgrE4kGePV1cl3c" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac76e8b7f0ac6a9de46323/m_69ac76ee21bd427b66dd90f1.jpg" alt="Larkspur Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Larkspur Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$180</span>
+            <a href="https://buy.stripe.com/bJeaEZgIZ7V804q8rx1cl3d" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b62d227ac6290180f17655/m_69b62dc5f6035a36a4ce2f05.jpg" alt="Madden Girl Olive Green Backpack with lunchbox" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Madden Girl Olive Green Backpack with lunchbox</h3>
+          <div class="product-bottom">
+            <span class="price">$36</span>
+            <a href="https://buy.stripe.com/aFaeVfboFb7kbN8dLR1cl3e" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/15/69e0358ffe4c687715dc25ca/m_69e0376249e17b831d1593d4.jpg" alt="Radley Oak Street Small Ziptop Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Radley Oak Street Small Ziptop Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$125</span>
+            <a href="https://buy.stripe.com/00w5kF0K12AO9F05fl1cl3f" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/15/69e03931bd4ce33a13b7a1be/m_69e039462326c89249821d4a.jpg" alt="Michael Kors Marilyn Brown and Beige  Satchel - crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Marilyn Brown and Beige  Satchel - crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$160</span>
+            <a href="https://buy.stripe.com/4gM14p3Wdcbo4kG0Z51cl3g" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac75255919e0eecc9b1405/m_69f0fbdcb14a0604340eac6e.jpg" alt="JW PEI Tan Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>JW PEI Tan Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$90</span>
+            <a href="https://buy.stripe.com/3cIfZj2S9dfs7wS4bh1cl3h" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9a6ce21bd425f92510905/m_69b9a6e34a072bbe86f4aaf5.jpg" alt="Chic Black Leather Shoulder Bag Set" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Black Leather Shoulder Bag Set</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/aFaaEZ3Wd8Zc6sO7nt1cl3i" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/15/69e019f4b09b7cb18869b81e/m_69e01ac8e9c77db2ae2c1a30.jpg" alt="💯Stella McCartney Dark Grey Studded Logo Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>💯Stella McCartney Dark Grey Studded Logo Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$850</span>
+            <a href="https://buy.stripe.com/aFa8wR9gx1wKbN82391cl3j" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/15/69e03b0bc71ba1f20d9d5f36/m_69e03b19b6af922dc4f353c4.jpg" alt="London Fog Black Woven Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>London Fog Black Woven Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$100</span>
+            <a href="https://buy.stripe.com/8x29AVfEVa3geZk8rx1cl3k" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c44685a9510538f9aa396b/m_69c4473649e17b0199861976.jpg" alt="Style & Co. Olive Green Woven Sling Crossbody with Gold Hardware" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Olive Green Woven Sling Crossbody with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/7sY28t64lb7k5oKazF1cl3l" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc2fd04a072b73afe02325/m_69bc30102326c83f1b05a15d.jpg" alt="Elegant Green Hobo Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Green Hobo Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/3cIfZjakB8ZccRc4bh1cl3m" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/16/69e0fce1bd4ce3244cbc278d/m_69e0fcf4b944910bfabcfe15.jpg" alt="Sam Edelman Evelyn Woven Cream Shoulder Bag with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Sam Edelman Evelyn Woven Cream Shoulder Bag with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/eVq9AVcsJ8Zcg3o37d1cl3n" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/13/69dd57ba24d2e78c5b8dbc54/m_69dd581649e17b1a43904f65.jpg" alt="On 34th Reddelle Cream Crossbody Bag with Gold Accent" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Reddelle Cream Crossbody Bag with Gold Accent</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/4gM28t8ct3ES7wSazF1cl3o" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/11/69daab0a1986c2b9d8199e1a/m_69daab21ff353a6d93c7f246.jpg" alt="INC International Concepts vanilla Faux Leather Wristlet Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts vanilla Faux Leather Wristlet Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/aFabJ350hb7k3gC9vB1cl3p" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7fb2f21bd42172b589ae1/m_69d7fb94f6035a70cacf1cb3.jpg" alt="Heart-Shaped White Crossbody Bag with Top Handle" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Heart-Shaped White Crossbody Bag with Top Handle</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/28E4gB2S93ES2cydLR1cl3q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7cd5a9f19e20109999752/m_69d7cd6b2981af39bd03be33.jpg" alt="On 34th White Tweed Heart Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th White Tweed Heart Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/8x2bJ3akBb7keZk6jp1cl3r" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d6a7f1c71ba1b172732eff/m_69d6a8c8ed788d182bd0d7f6.jpg" alt="Elegant White Shoulder Bag with Gold Accent" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant White Shoulder Bag with Gold Accent</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/fZu7sNfEV2AO9F02391cl3s" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69ccfb6af92bbfee802e5/m_69d69cd7ff353a41dce79316.jpg" alt="White Crochet Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>White Crochet Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/dRmaEZcsJdfs04q6jp1cl3t" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc14139936d61a7eaa2052/m_69cc141f21b80195136797ee.jpg" alt="I.N.C. International Concepts
+Rachell Mini Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>I.N.C. International Concepts
+Rachell Mini Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/3cI3cxcsJgrE9F07nt1cl3u" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc12f7bd4ce3945fe245a7/m_69cc130224b20b745f8f8bfb.jpg" alt="Style & Co White Laser-Cut Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co White Laser-Cut Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/5kQcN71O53ES4kG0Z51cl3v" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf738420644494df0ac96/m_69cbf773d7555d9a51eae1b8.jpg" alt="Style & Co. White Floral Cutout Crossbody Bag with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. White Floral Cutout Crossbody Bag with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$38</span>
+            <a href="https://buy.stripe.com/14AbJ3gIZa3gg3o4bh1cl3w" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2d79a7ac6299080c8be77/m_69c2d7dbc71ba1d1223ceae6.jpg" alt="White Leather Shoulder Bag with Decorative Cutouts" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>White Leather Shoulder Bag with Decorative Cutouts</h3>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <a href="https://buy.stripe.com/14A00lboF7V8dVg5fl1cl3x" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5d9e4a0dc2b033e1bb602/m_69b5d9ed2fa05446bbf8b3ff.jpg" alt="Sam Edelman Ivory Woven Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Sam Edelman Ivory Woven Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/4gMdRbfEVgrE9F04bh1cl3y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b859b514937742af906252/m_69b859b9dbd8f0415a27ec91.jpg" alt="Elegant White Heart Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant White Heart Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/7sYeVf3WdgrE7wSgY31cl3z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad1601986c283268e2030/m_69bad1a724d2e70c8b043ea9.jpg" alt="Style & Co. Cream Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Cream Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/9B600l9gx8ZceZk7nt1cl3A" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b89f59b09b7c7b07e04ca7/m_69b89f659f034c45890c1c1b.jpg" alt="Style & Co. Cream Leather Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Cream Leather Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$32</span>
+            <a href="https://buy.stripe.com/cNidRb9gxa3g8AWePV1cl3B" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/10/69d95df524b20b8beef4b44e/m_69d95e0224d2e7289a9103aa.jpg" alt="On 34th Neutral Cream Saddle Crossbody Bag with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Neutral Cream Saddle Crossbody Bag with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <a href="https://buy.stripe.com/fZu9AV78pdfs5oKfTZ1cl3C" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b89dd37ac62958fc490218/m_69b89de514937742af932c1b.jpg" alt="Chic Tan Woven Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Tan Woven Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/14AcN7eARb7k3gC7nt1cl3D" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3d9262326c804db3e1ff5/m_69d3d98fb6af92b0791f7288.jpg" alt="INC Quilted Beige Stud-Accent Top-Handle Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC Quilted Beige Stud-Accent Top-Handle Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/cNi5kF8ct0sGbN8cHN1cl3E" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c4518e243daef58afeddcc/m_69c4519644ad4d208b20b3c7.jpg" alt="INC International Concepts Croc-Embossed Cream Crossbody Bag with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Croc-Embossed Cream Crossbody Bag with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/5kQaEZboF1wK2cycHN1cl3F" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b1c7fe24d2e78aed5ad20a/m_69b1c8192981af68ffaf9e0a.jpg" alt="Stylish Taupe Crossbody Bag with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Stylish Taupe Crossbody Bag with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/bJe8wRdwN4IW18ucHN1cl3G" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b8a38c24b20b9b88f0a8d3/m_69b8a39a2c9e44fb0df236ae.jpg" alt="INC International Concepts Cream Shoulder Bag Set" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Cream Shoulder Bag Set</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/6oUfZjdwN7V8bN8azF1cl3H" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bacdb649e17b021232ab70/m_69bacdbfdbd8f06a0739589c.jpg" alt="Style &Co Beige Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style &Co Beige Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/14A7sN64l3ES2cy6jp1cl3I" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/21/69e7a65c955383f9b9c76457/m_69e7a6d9c71ba1e7f26a1ae8.jpg" alt="Patricia Nash Ithaca Small Leather Crossbody Bag" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>Patricia Nash Ithaca Small Leather Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/00w28tgIZ8Zc7wScHN1cl3J" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c5704d21b8013d567afb66/m_69c5705c1493777f20c2b8d9.jpg" alt="Classic Black Leather Drawstring Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Classic Black Leather Drawstring Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/aFa3cxakB3ES4kG37d1cl3K" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/09/69d7c76e4a072bccfc0231db/m_69d7c7f12981af39bd038bda.jpg" alt="On 34th Black Quilted Crossbody Bag with Adjustable Strap" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Black Quilted Crossbody Bag with Adjustable Strap</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/3cIfZj9gxgrE7wS4bh1cl3L" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69821b09b7c2aea89b724/m_69d6986ef59cc40031693bb8.jpg" alt="On 34th Stylish Black Soft Shoulder Bag for Women" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Stylish Black Soft Shoulder Bag for Women</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/8x2dRbboF8Zc9F00Z51cl3M" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3e589ff353a3a8006e91e/m_69d3e590a0dc2b947d3abd7a.jpg" alt="INC International Concepts Black Decorative Clamshell Accent with Gold Clasp" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Black Decorative Clamshell Accent with Gold Clasp</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/eVqaEZakB4IW18u0Z51cl3N" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3e11442064472fa052993/m_69d3e11bb6af9214131fbdaa.jpg" alt="Classic Quilted Black Shoulder Bag with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Classic Quilted Black Shoulder Bag with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/5kQ00lcsJ4IW7wS37d1cl3O" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3de16bedd346bee9fecf1/m_69d3de2424d2e75e54869b64.jpg" alt="INC International Concepts Black Glitter Clutch with Bow Clasp" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Black Glitter Clutch with Bow Clasp</h3>
+          <div class="product-bottom">
+            <span class="price">$18</span>
+            <a href="https://buy.stripe.com/00w8wReAR5N04kG37d1cl3P" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc5eebb9449195533033c1/m_69cc5efb9f034ce2d90cf92b.jpg" alt="On 34th Nylon Belt Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Nylon Belt Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/5kQ9AV78p3ES6sOcHN1cl3Q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf4a4001542e0ade9d4a6/m_69cbf4c405deb3797360d0e2.jpg" alt="On 34th Classic Black Crossbody Bag with Gold Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Classic Black Crossbody Bag with Gold Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/4gMeVf9gxb7k18ucHN1cl3R" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c566ab21b80189e77a954a/m_69c566aed8024c73d4506b78.jpg" alt="Structured Black Top-Handle Satchel with Gold Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Structured Black Top-Handle Satchel with Gold Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/4gM5kF0K10sG4kG5fl1cl3S" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/12/69b349cf955383c362368c8e/m_69b34a47dc3b46ff4358a37c.jpg" alt="Sam Edelman Black Leather Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Sam Edelman Black Leather Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/00w3cx9gx0sG04q9vB1cl3T" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc2bf6006e4338663f6f33/m_69bc2c04f59cc4041fd3b886.jpg" alt="Urban Expressions Black Mini crossbody Bag with Braided Handle" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Urban Expressions Black Mini crossbody Bag with Braided Handle</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/00w5kF0K1cbobN88rx1cl3U" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2dc6e3509d18f6b6e9c9a/m_69c2dc80dc3b460caefa136e.jpg" alt="GUESS Black Satchel with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>GUESS Black Satchel with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/3cI9AVgIZejwg3o5fl1cl3V" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b58dc72c9e44327999144a/m_69b58dcdb14a06418ad395c7.jpg" alt="INC International Concepts Black Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Black Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/9B628t2S92AO8AW2391cl3W" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad32a9f034c4f771ae8bb/m_69bad34588849aee2470aefb.jpg" alt="Black Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Black Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/aFa4gB2S9ejw2cyfTZ1cl3X" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b633e6ff353a5b64b4e915/m_69b633ecc4e7b4b0e4e0b3eb.jpg" alt="INC International Concepts Black and White Mesh Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Black and White Mesh Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/bJe8wR2S9fnAeZkdLR1cl3Y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b8a0ba4a072bdfa5edf82b/m_69b8a0c9149377709d934b18.jpg" alt="Style & Co. Black Leather Clutch with Whipstitch Detail" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Black Leather Clutch with Whipstitch Detail</h3>
+          <div class="product-bottom">
+            <span class="price">$42</span>
+            <a href="https://buy.stripe.com/28EaEZdwN7V87wSazF1cl3Z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc2d0ac4e7b47d03f2ed0c/m_69bc2dcb42064410decd1fd8.jpg" alt="Sophisticated Black Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Sophisticated Black Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$22</span>
+            <a href="https://buy.stripe.com/dRmdRbcsJ3ES4kG7nt1cl40" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/09/69af23b021b801e7a79d957f/m_69af23bbb6af92cea6dab604.jpg" alt="Steve Madden Black Croc-Embossed Satchel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Steve Madden Black Croc-Embossed Satchel</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/6oUaEZcsJ8Zc9F0dLR1cl41" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/08/69ad87be88849acc997dadbf/m_69ad87d0006e43d25f378df4.jpg" alt="Nine West Midnight Satchel with Charm" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Nine West Midnight Satchel with Charm</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/cNi28tfEVdfsaJ40Z51cl42" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac4e322c9e44254db83632/m_69ac4e392c9e446404b83656.jpg" alt="Calvin Klein Black Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Calvin Klein Black Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$85</span>
+            <a href="https://buy.stripe.com/9B63cx9gx7V8bN86jp1cl43" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/01/697fc954d7555d800b5a641c/m_697fc9599f034c88e69ec238.jpg" alt="Grosci Black Bow Satchel for Women" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Grosci Black Bow Satchel for Women</h3>
+          <div class="product-bottom">
+            <span class="price">$28</span>
+            <a href="https://buy.stripe.com/fZu28t64lcbo9F0ePV1cl44" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/699755ffa9a448e87d5a574c/m_699756a14a072b6bef55416b.jpg" alt="Chic Black Leather Wristlet Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Black Leather Wristlet Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/00wbJ364l7V8dVg5fl1cl45" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/07/695ec10fb14a0605825a95c2/m_695ec124b14a0676265a968e.jpg" alt="Style & Co. Elegant Black Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Elegant Black Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/aFa14p8ct1wKcRc2391cl46" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="michael kors">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/06/69ab1513c71ba1b0a9a371b8/m_69ab1513c71ba1b0a9a371b9.jpg" alt="Michael Kors Black Leather Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Black Leather Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/7sYcN7eARa3g7wS9vB1cl47" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/12/69b2e5723509d125d578bb9a/m_69b2e6e405deb3a12e153135.jpg" alt="Steve Madden Black Satchel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Steve Madden Black Satchel</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/eVq5kFdwNb7k6sOgY31cm00" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc3588001542a4aa3c0533/m_69bc35969b21589a2dbdfb92.jpg" alt="Guess Black Tote with Gold Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Guess Black Tote with Gold Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/bJebJ30K1ejw3gC5fl1cm01" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/12/69b3457c9936d6672eb347f4/m_69b34582d8024cb97a679874.jpg" alt="Samsonite Black Duffel Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Samsonite Black Duffel Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$160</span>
+            <a href="https://buy.stripe.com/eVqbJ38ctdfs6sO0Z51cm02" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b1a97185001279add1b913/m_69b1a977b14a0685af2006e0.jpg" alt="DKNY Glossy Black Satchel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>DKNY Glossy Black Satchel</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/6oUaEZboF2AO8AWbDJ1cm03" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad672bdcb040e5edbf57f/m_69bad67d49e17ba41c32fe96.jpg" alt="Elegant Black Beaded Clutch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Black Beaded Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/aFa4gBeARejw9F05fl1cm04" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b180b03509d1e8cf7d520a/m_69b180b624b20b9b32f6c47d.jpg" alt="Samsonite Black Bag with Gold Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Samsonite Black Bag with Gold Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$130</span>
+            <a href="https://buy.stripe.com/6oU5kFeAR5N06sO6jp1cm05" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b4a4533509d115458675f1/m_69b4a4a5d7555d296973c6c4.jpg" alt="Black Women&#39;s Bag with Cherry Charm" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Black Women&#39;s Bag with Cherry Charm</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/aFa14p3WdfnA4kG8rx1cm06" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/6997592621b8016cc6e8cde2/m_699759a521b801f82ee8d2ea.jpg" alt="Chic Clear and Black Mini Bag with Gold Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Clear and Black Mini Bag with Gold Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$23</span>
+            <a href="https://buy.stripe.com/5kQ4gB1O5cbog3o8rx1cm07" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/09/698a56a1bedd342e0a521439/m_698a572a9b2158fc9cdf0b47.jpg" alt="Style & Co. Black Crossbody Bag with Front Zipper" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Black Crossbody Bag with Front Zipper</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/fZueVfdwN5N04kGgY31cm08" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/20/69987ed8b7f0ac55f689085d/m_69987edfbdcb04975b14cc9e.jpg" alt="Elegant Brown Transparent Handbag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Brown Transparent Handbag</h3>
+          <div class="product-bottom">
+            <span class="price">$23</span>
+            <a href="https://buy.stripe.com/28E14pboFb7k8AWfTZ1cm09" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/04/69a8cb502fa0544728d6e35e/m_69a8cb502fa0544728d6e35f.jpg" alt="Brown Leather Women&#39;s Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Brown Leather Women&#39;s Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/00w6oJ78pfnA5oK9vB1cm0a" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/20/69987cf32981af3710bb67d3/m_69987d6144ad4d8df2e99049.jpg" alt="Elegant Brown Handbag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Brown Handbag</h3>
+          <div class="product-bottom">
+            <span class="price">$28</span>
+            <a href="https://buy.stripe.com/9B6eVf0K10sG3gCazF1cm0b" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/08/696005bf24d2e7e3d14c7b6a/m_696005d0b7f0ace1330d1e52.jpg" alt="Style & Co. Studded Brown Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Studded Brown Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/7sYbJ364l0sG9F04bh1cm0c" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b5885f05deb32003280406/m_69b5886d9f19e26df6f54524.jpg" alt="Style & Co. Tan Corduroy Sling Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Tan Corduroy Sling Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/4gM3cxdwNb7k3gCbDJ1cm0d" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9aab224b20b0270f7617e/m_69b9aabc9b21583a74b0ab23.jpg" alt="Style & Co. Brown Floral Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Brown Floral Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/eVq7sNfEV4IWeZk7nt1cm0e" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/12/69b2e3eedc3b46824b54a054/m_69b2e3f45df8e77f6e0dae0b.jpg" alt="Anne Klein Dark Brown 3 pc Work Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Anne Klein Dark Brown 3 pc Work Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/aFadRbakB5N0cRc7nt1cm0f" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/14/69b6299c2fa054db24fb980f/m_69b62a0d88849a271f9eac13.jpg" alt="Anne Klein Brown and Tan Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Anne Klein Brown and Tan Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/bJe9AV3Wd1wKaJ49vB1cm0g" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2eae4c4e7b49cc0238615/m_69c2eafb4a072b5cd62b03f6.jpg" alt="INC International Concepts Leopard Print Studded Zip Around" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Leopard Print Studded Zip Around</h3>
+          <div class="product-bottom">
+            <span class="price">$18</span>
+            <a href="https://buy.stripe.com/aFa9AV64lejwbN8bDJ1cm0h" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c444a4b14a066cd26e5b5d/m_69c444f0b7f0ac7a5503d7ef.jpg" alt="INC International Concepts Snake Print Wristlet Clutch in Brown and Black" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Snake Print Wristlet Clutch in Brown and Black</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/3cIeVfgIZ8ZceZkfTZ1cm0i" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c568240015428e2dbfa2b1/m_69c56834d8024c73d4507b37.jpg" alt="Style & Co. Brown Braided Leather Tote Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Brown Braided Leather Tote Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/fZueVf9gx4IWaJ42391cm0j" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc10337ac62965121e6938/m_69cc11969553839cdbec0b36.jpg" alt="On 34th Tan Leather Tote Bag with Zip Pouch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Tan Leather Tote Bag with Zip Pouch</h3>
+          <div class="product-bottom">
+            <span class="price">$63</span>
+            <a href="https://buy.stripe.com/4gM9AV9gx0sG18u9vB1cm0k" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc5a6b001542eb07edbe6f/m_69cc5a727ac6292603214147.jpg" alt="INC International Concepts Leopard Print Crossbody in Brown and Black" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Leopard Print Crossbody in Brown and Black</h3>
+          <div class="product-bottom">
+            <span class="price">$18</span>
+            <a href="https://buy.stripe.com/dRm4gB2S9b7k2cy7nt1cm0l" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3dade9f034cbaad081b5f/m_69d3db9b21bd425e7e7254cf.jpg" alt="INC Classic Brown Leather Shoulder Bag with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC Classic Brown Leather Shoulder Bag with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/00w28t0K18Zc04q4bh1cm0m" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3dc35a0dc2b950b3a6317/m_69d3dc39c71ba18c9b60200d.jpg" alt="INC International Concepts Brown Crescent Hobo Bag with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Brown Crescent Hobo Bag with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/5kQ14pgIZfnA5oK37d1cm0n" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/06/69d3deef24b20bcbc9e480eb/m_69d3df73bd4ce36fe46afdaf.jpg" alt="TSD Red wood Canvas Tote with Leather Trim and Brown Leather Handles" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>TSD Red wood Canvas Tote with Leather Trim and Brown Leather Handles</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/14A7sNcsJ0sGeZkgY31cm0o" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69672e9c77ded856ca51e/m_69d69681e9c77dd1426ca5bc.jpg" alt="INC Snake-Print Hobo Shoulder Bag in Brown" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC Snake-Print Hobo Shoulder Bag in Brown</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/14AdRb64lejwdVg5fl1cm0p" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/11/69dab93d243dae9df7a2ef4e/m_69dabad914937742d88ca6d7.jpg" alt="INC International Concepts Snake Print Zip Wallet - Brown/Black" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Snake Print Zip Wallet - Brown/Black</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/7sYbJ3akBfnA4kGdLR1cm0q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc5cfe1986c243532583d5/m_69cc5d0cdbd8f01f6576f12a.jpg" alt="On 34th Classic Pebbled Mini Satchel Shoulder Bag in Camel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Classic Pebbled Mini Satchel Shoulder Bag in Camel</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/5kQ3cx78pdfsdVgcHN1cm0r" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbef732326c8ca5f3f70ae/m_69cbf00abedd341f77f20aaf.jpg" alt="I.N.C. International Concepts
+Ninah Sculpted Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>I.N.C. International Concepts
+Ninah Sculpted Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/bJe4gB9gx8ZcdVgdLR1cm0s" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c438dff59cc4782b4f00d0/m_69c4399f21b80138a3b3b05d.jpg" alt="INC International Concepts Tan Leather Hobo Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Tan Leather Hobo Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/6oU3cx64lb7kcRc4bh1cm0t" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2b10d006e4351b48421d9/m_69c2b160bdcb04f748550af0.jpg" alt="INC International Concepts Tan Woven Shoulder Bag with Wrist Pouch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Tan Woven Shoulder Bag with Wrist Pouch</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/cNicN7csJfnA2cy0Z51cm0u" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/18/69bad9a42326c8393670921d/m_69bada3d95538352eb63806a.jpg" alt="Jimmy Choo Diamond Hobo Toffee/gold" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Jimmy Choo Diamond Hobo Toffee/gold</h3>
+          <div class="product-bottom">
+            <span class="price">$980</span>
+            <a href="https://buy.stripe.com/8x2dRbdwNejw5oKazF1cm0v" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9a76dc4e7b4fd8c3aa04f/m_69b9a780c4e7b4f4083aa11b.jpg" alt="Chic Tan Women&#39;s Tote Bag Set" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Tan Women&#39;s Tote Bag Set</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/fZu6oJdwN5N06sOcHN1cm0w" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9951649e17b9a372a25c2/m_69b9956888849a6c0867f606.jpg" alt="Elegant Tan and Cream Tote Bag Set" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Tan and Cream Tote Bag Set</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/9B67sN2S97V818u7nt1cm0x" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b20d05b7f0ac055b4c4b89/m_69b20d43420644598df83f47.jpg" alt="The Sak Tan Leather Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>The Sak Tan Leather Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/14A28t2S96R46sOfTZ1cm0y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/16/69e10083c71ba144b4a1f4a8/m_69e10287955383eda2ff2b7c.jpg" alt="Calvin Klein Cream Fay Pebbled Leather Shoulder Bag with Contrast Trim" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Calvin Klein Cream Fay Pebbled Leather Shoulder Bag with Contrast Trim</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/fZudRb3WdgrEbN8dLR1cm0z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/699755c42981afa89ef70cac/m_699755ca21bd428518fa4176.jpg" alt="Pink Beaded Cowgirl Clutch" loading="lazy">
+          <span class="product-tag">Accessories</span>
+        </div>
+        <div class="product-info">
+          <h3>Pink Beaded Cowgirl Clutch</h3>
+          <div class="product-bottom">
+            <span class="price">$22</span>
+            <a href="https://buy.stripe.com/aFa00l50h1wK2cy6jp1cm0A" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/699754799f034ce8de8f6014/m_6997547f310f1c68be71930e.jpg" alt="Beaded Pink Clutch - Wifey For Lifey" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Beaded Pink Clutch - Wifey For Lifey</h3>
+          <div class="product-bottom">
+            <span class="price">$24</span>
+            <a href="https://buy.stripe.com/cNi5kF78p4IWg3o37d1cm0B" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="beaded">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/20/69987dc849e17b7d8391891d/m_69987dd0b09b7cce4f44d716.jpg" alt="Patriotic Beaded Heart Pouch" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Patriotic Beaded Heart Pouch</h3>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <a href="https://buy.stripe.com/cNi5kF64l4IWbN85fl1cm0C" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b4b054e9c77dc7a6ea45ff/m_69b4b091dc3b468bac62daf9.jpg" alt="ON-34TH Beaded Blue Clutch with Tassel" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>ON-34TH Beaded Blue Clutch with Tassel</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/28E4gB3Wd5N03gCePV1cm0D" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d6ab189f034cd5abad2671/m_69d6aba9ff353abbb1bfb538.jpg" alt="Floral Wristlet Wallet in Pink, Teal & Red" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Floral Wristlet Wallet in Pink, Teal & Red</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/8x2bJ39gx6R4bN86jp1cm0E" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc16491493778104cc0fef/m_69cc16561986c274ee22cd1e.jpg" alt="On 34th Metallic Silver Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>On 34th Metallic Silver Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/14AaEZfEV7V804q4bh1cm0F" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b4792405deb327c7213a9b/m_69b47930c4e7b4ac83d3822e.jpg" alt="Chloe Taupe Leather Marcie  Hobo Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chloe Taupe Leather Marcie  Hobo Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$1650</span>
+            <a href="https://buy.stripe.com/3cIbJ3akBcbo18u2391cm0G" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/699752f31986c247bb847eeb/m_6997531024b20b0c465505e2.jpg" alt="Elegant Silver Women&#39;s Handbag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Silver Women&#39;s Handbag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/8x2fZjgIZ2AO04qbDJ1cm0H" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d6a9269553833bde954b77/m_69d6a9527ac629995b7955ef.jpg" alt="INC International Concepts Quilted Red zip around wristle with Gold Accent" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Quilted Red zip around wristle with Gold Accent</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/7sY8wR64lb7k6sOePV1cm0I" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/08/696008fe9b2158f31ec349a1/m_69600906243dae5047ccab97.jpg" alt="The Sak Red Leather Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>The Sak Red Leather Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/7sY9AV0K15N05oK5fl1cm0J" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9a95fe9c77d94698b8038/m_69b9a96388849a1eca68bda1.jpg" alt="Chic Red Satchel Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Chic Red Satchel Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/bJe9AV2S91wK2cyazF1cm0K" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b85c61f59cc4d4920671c5/m_69b85c66e9c77d42b581e73d.jpg" alt="Forest island Tote \ 100% eco genuine Leather" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Forest island Tote \ 100% eco genuine Leather</h3>
+          <div class="product-bottom">
+            <span class="price">$250</span>
+            <a href="https://buy.stripe.com/aFafZj0K1dfsdVgbDJ1cm0L" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/11/69b17d7cbedd34c8408e8756/m_69b17e3ed8024c68f9b88c29.jpg" alt="INC International Concepts Quilted Red Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Quilted Red Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/5kQ7sNfEV0sG8AWdLR1cm0M" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/08/69d69dc295538363375f5209/m_69d69dda9f034c938ccc0b86.jpg" alt="Red Crochet Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Red Crochet Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$30</span>
+            <a href="https://buy.stripe.com/8x2bJ32S9grEg3o6jp1cm0N" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="michael kors">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/08/6960012621b801c3717dabca/m_69600145a9a448f6d4085d71.jpg" alt="Michael Kors Black and Gold Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Michael Kors Black and Gold Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/14AeVfgIZb7k5oK9vB1cm0O" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb90739b2158e13697f30f/m_69eb907e420644e5f0824b80.jpg" alt="Giani Bernini Black, Cream & Tan Leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Black, Cream & Tan Leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/6oU6oJ50hdfs7wS6jp1cm0P" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed59505df8e7ab87c89d18/m_69ed596f1493774e6e0ac8dd.jpg" alt="Giani Bernini Cream Leather Crossbody Wristlet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Cream Leather Crossbody Wristlet</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/dRm00l78p5N018uazF1cm0Q" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed3367dbd8f0520780ec25/m_69ed343b44ad4daad10d350a.jpg" alt="Giani Bernini Nappa Leather Front Zip Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Nappa Leather Front Zip Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/aFaeVf0K10sG7wS4bh1cm0R" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/25/69ed043b4a072bafa868a6f3/m_69ed0497b6af9224624f473e.jpg" alt="Giani Bernini Dark Brown Pebbled Crossbody Bag with Silver-Tone Logo" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Dark Brown Pebbled Crossbody Bag with Silver-Tone Logo</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/fZu7sNeAR8Zcg3odLR1cm0S" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/24/69eb9371ff353ad4af5408b6/m_69eb9379b09b7c1436f4018d.jpg" alt="Giani Bernini Nappa Leather Hobo Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Nappa Leather Hobo Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/8x200lcsJ0sG3gC2391cm0T" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/19/69bc8940bdcb042ce350c828/m_69bc8954d7555d2b523df714.jpg" alt="Saffiano Navy Blue Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Saffiano Navy Blue Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$75</span>
+            <a href="https://buy.stripe.com/eVqaEZeAR6R45oKazF1cm0U" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/26/69c573573509d1e7aec795f3/m_69c57468c71ba1ef796a4e24.jpg" alt="Giani Bernini Folkstone Gray Leather Crossbody with Gold Hardware" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Folkstone Gray Leather Crossbody with Gold Hardware</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/8x2aEZfEVb7k6sO7nt1cm0V" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf2f9850012ded67eceb7/m_69cbf312243daeef715e7a6a.jpg" alt="Giani Bernini Forest Green
+Saffiano Crossbody" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Forest Green
+Saffiano Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$45</span>
+            <a href="https://buy.stripe.com/5kQ14pboFfnA6sOcHN1cm0W" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/11/69daa80ebdcb04c2ca4ee216/m_69daa86fb14a063f460a943b.jpg" alt="Giani Bernini White Wristlet Phone Crossbody" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini White Wristlet Phone Crossbody</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/eVq3cx78p3ES7wS9vB1cm0X" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf18d1493778177caa38c/m_69cbf207fe4c68c0686f06a1.jpg" alt="Giani Bernini Crossbody Bag in Light Gray and Tan" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Crossbody Bag in Light Gray and Tan</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/28E3cx9gx7V86sOfTZ1cm0Y" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbf0a9b94491e8ba2bf2f0/m_69cbf118b09b7c7627aa951e.jpg" alt="Giani Bernini
+Quilted Patent Medium Book Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini
+Quilted Patent Medium Book Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$80</span>
+            <a href="https://buy.stripe.com/00waEZ64lfnA04q7nt1cm0Z" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c448e6f6035a31cbb2d265/m_69c448eb310f1cf4035b62b2.jpg" alt="Giani Bernini small Quilted Saddle Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini small Quilted Saddle Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/9B65kFeAR6R42cyePV1cm10" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c452824a072b5ca6357ad8/m_69c452884a072bc9c6357b23.jpg" alt="Gianni Bini Black Croc-Embossed Crossbody Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Gianni Bini Black Croc-Embossed Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/6oU8wRdwN4IW9F0fTZ1cm11" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c436054206448827940f55/m_69c436150015420cefaea67d.jpg" alt="Giani Bernini framed indexer Wallet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini framed indexer Wallet</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/aFa4gBcsJ7V87wS4bh1cm12" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2f20524d2e7958cec463c/m_69c2f2ceff353a7fff789a81.jpg" alt="Giani Bernini Black Leather Shoulder Bag with Front Zip" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Black Leather Shoulder Bag with Front Zip</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/7sY4gB78p8ZccRc6jp1cm13" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/16/69b8a21d9f034c01340c3a09/m_69b8a22e4a072bbbbcee083a.jpg" alt="Giani Bernini Black Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Black Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$55</span>
+            <a href="https://buy.stripe.com/5kQ8wR2S9fnAeZk5fl1cm14" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="crossbody">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/24/69c2ccf2b944914a70e615e0/m_69c2cd339f19e25188d444b6.jpg" alt="Navy Giani Bernini Nappa Leather Crossbody Bag" loading="lazy">
+          <span class="product-tag">Other</span>
+        </div>
+        <div class="product-info">
+          <h3>Navy Giani Bernini Nappa Leather Crossbody Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$60</span>
+            <a href="https://buy.stripe.com/fZu9AVgIZ4IWaJ45fl1cm15" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/08/69ad867342064494654fd3bf/m_69ad873005deb3fe805f434f.jpg" alt="Giani Bernini Black Leather Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Black Leather Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/7sY4gBgIZ7V84kG6jp1cm16" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/13/69b4a2e9b09b7cd5e536ca19/m_69b4a301c71ba13347ca6798.jpg" alt="Giani Bernini Black Leather Tote" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Giani Bernini Black Leather Tote</h3>
+          <div class="product-bottom">
+            <span class="price">$75</span>
+            <a href="https://buy.stripe.com/cNi7sNakBb7k7wSePV1cm17" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="tote">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/17/69b9900cfe4c68dd0440f9a3/m_69b99060f6035abf0614ba44.jpg" alt="Elegant Green Woven Tote Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Green Woven Tote Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/bJeaEZ78p8Zc2cyfTZ1cm19" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/10/69d95ccfdc3b46af02a7a5e6/m_69d95ce1b14a06efe7016539.jpg" alt="INC International Concepts Pale Yellow Zip Clutch with Front Pocket" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Pale Yellow Zip Clutch with Front Pocket</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/6oUeVf1O5dfsdVgePV1cm1a" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/04/10/69d95aedb94491ddc54bfaa7/m_69d95af45df8e74bc5d2a45f.jpg" alt="INC International Concepts Quilted Shoulder Bag in Light Yellow with Gold Chain" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Quilted Shoulder Bag in Light Yellow with Gold Chain</h3>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <a href="https://buy.stripe.com/6oU9AV8ct1wK4kG2391cm1b" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cc5ba37ac6292f98214ca2/m_69cc5bb32fa054e91fa0c2fc.jpg" alt="Style&Co Metallic Beige Zip Wallet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style&Co Metallic Beige Zip Wallet</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/5kQ4gB64lfnAaJ48rx1cm1c" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/31/69cbfa77bdcb04e8fa114210/m_69cbfac5420644597bf0ce4c.jpg" alt="INC International Concepts Silver Crystal Shoulder  Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>INC International Concepts Silver Crystal Shoulder  Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$50</span>
+            <a href="https://buy.stripe.com/6oU9AV64l3ES3gCgY31cm1d" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/25/69c4407db6af92d5d0f0061b/m_69c440f5bd4ce3144a5b7d76.jpg" alt="Embellished Silver Beaded Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Embellished Silver Beaded Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$40</span>
+            <a href="https://buy.stripe.com/14AdRbgIZ5N03gCazF1cm1e" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="other">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/03/07/69ac9bdab6af92cea6c71385/m_69ac9be1d7555de5e17c33b3.jpg" alt="Kate Spade Two-Tone White and Tan Wallet" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Kate Spade Two-Tone White and Tan Wallet</h3>
+          <div class="product-bottom">
+            <span class="price">$70</span>
+            <a href="https://buy.stripe.com/7sYbJ350hejw4kGazF1cm1f" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="clutch">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/02/19/6997772bf59cc4dc1201a874/m_699777349b21586af9186f4b.jpg" alt="Elegant Gold Clutch Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Elegant Gold Clutch Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$35</span>
+            <a href="https://buy.stripe.com/8x24gBboF0sG9F0gY31cm1g" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="beaded">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/05/04/69f8ea0021b801c247087ff0/m_69f8ea0021b801c247087ff1.jpg" alt="Round Black Beaded Mini Bag with Red Sequin Flower Accents" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Round Black Beaded Mini Bag with Red Sequin Flower Accents</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/3cI9AVakB5N018udLR1cm1h" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="beaded">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/05/04/69f8eb0c9b21586f6a89151a/m_69f8eb0c9b21586f6a89151b.jpg" alt="Floral Beaded Coin purse" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Floral Beaded Coin purse</h3>
+          <div class="product-bottom">
+            <span class="price">$20</span>
+            <a href="https://buy.stripe.com/bJefZjboF4IW3gC37d1cm1i" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+      <div class="product-card" data-tag="shoulder">
+        <div class="product-img">
+          <img src="https://di2ponv0v5otw.cloudfront.net/posts/2026/01/19/696eba285919e05830b52967/m_696eba45e9c77d3077b884dc.jpg" alt="Style & Co. Classic Black Shoulder Bag" loading="lazy">
+          <span class="product-tag">Handbags</span>
+        </div>
+        <div class="product-info">
+          <h3>Style & Co. Classic Black Shoulder Bag</h3>
+          <div class="product-bottom">
+            <span class="price">$25</span>
+            <a href="https://buy.stripe.com/3cI7sNgIZgrE18ugY31cm1j" target="_blank" class="buy-btn" style="display:block;text-align:center;text-decoration:none;">Buy Now 🛒</a>
+          </div>
+      </div>
+      </div>
+    </div></section>
+
+  <footer>
+    <div class="footer-left">
+      <img src="https://base44.app/api/apps/6a07ce0bd5944f632f6f429a/files/mp/public/6a07ce0bd5944f632f6f429a/1ba11f8ce_my_best_life_logo.png" alt="My Best Life">
+      <div class="footer-brand">My Best Life<span>Bags & Accessories</span></div>
+    </div>
+    <nav><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="https://www.instagram.com/mybestlife.store/" target="_blank">Instagram</a></nav>
+    <div class="footer-copy">© 2026 My Best Life &nbsp;·&nbsp; <a href="https://jfwebstudios.com" target="_blank">Site by JF Web Studios</a></div>
+  </footer>
+
+
+  <script>
+    function filterBags(keyword) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const tag = card.querySelector('.product-tag').textContent.toLowerCase();
+        if (keyword === 'all' || title.includes(keyword) || tag.includes(keyword)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.product-card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-tag') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+  
+
+</body>
+</html>
