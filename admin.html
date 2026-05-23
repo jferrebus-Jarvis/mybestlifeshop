@@ -13,24 +13,25 @@ body{background:var(--bg);color:var(--dark);font-family:'Jost',sans-serif;min-he
 .logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;letter-spacing:2px;color:var(--dark);text-align:center;margin-bottom:6px}
 .subtitle{text-align:center;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--light);margin-bottom:32px}
 label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;margin-top:18px}
-input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:14px;color:var(--dark);background:var(--bg);outline:none;transition:border 0.2s}
-input:focus,select:focus,textarea:focus{border-color:var(--accent)}
-textarea{resize:vertical;min-height:60px}
-.btn{width:100%;margin-top:24px;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:4px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+input,select{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:14px;color:var(--dark);background:var(--bg);outline:none;transition:border 0.2s}
+input:focus,select:focus{border-color:var(--accent)}
+.btn{width:100%;margin-top:24px;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:4px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background 0.2s;text-decoration:none;display:block;text-align:center}
 .btn:hover{background:var(--dark)}
-.btn.danger{background:#b85c5c}
-.btn.danger:hover{background:#8a2c2c}
-.btn:disabled{background:var(--light);cursor:not-allowed}
-.msg{margin-top:14px;padding:12px;border-radius:4px;font-size:13px;text-align:center;display:none}
-.msg.success{background:#f0faf0;color:#2d6a2d;border:1px solid #a8d5a8}
-.msg.error{background:#faf0f0;color:#6a2d2d;border:1px solid #d5a8a8}
-.msg.info{background:#f0f4fa;color:#2d4a6a;border:1px solid #a8b8d5}
+.btn.green{background:#5a8a5a}
+.btn.green:hover{background:#3a5a3a}
 .divider{margin:32px 0;border:none;border-top:1px solid var(--border)}
-.preview-wrap{margin-top:12px;text-align:center;display:none}
-.preview-wrap img{width:100px;height:100px;object-fit:contain;border:1px solid var(--border);border-radius:4px;background:var(--gray)}
+.step{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+.step-num{flex-shrink:0;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+.step-text{font-size:13px;color:var(--dark);line-height:1.6}
+.step-text strong{color:var(--accent);font-family:'Courier New',monospace;font-weight:600;background:#f5f0ee;padding:2px 6px;border-radius:3px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;letter-spacing:1px;color:var(--dark);margin-bottom:6px}
+.section-sub{font-size:11px;color:var(--light);letter-spacing:1px;margin-bottom:20px}
+.msg{margin-top:14px;padding:12px;border-radius:4px;font-size:13px;text-align:center;display:none}
+.msg.error{background:#faf0f0;color:#6a2d2d;border:1px solid #d5a8a8}
 a.back{display:block;text-align:center;margin-top:20px;font-size:11px;letter-spacing:1.5px;color:var(--light);text-decoration:none}
 a.back:hover{color:var(--accent)}
-.spinner{display:none;text-align:center;margin-top:10px;font-size:12px;color:var(--accent);letter-spacing:1px}
+.imessage-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#34c759;color:#fff;border:none;border-radius:4px;padding:14px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background 0.2s;width:100%;margin-top:16px}
+.imessage-btn:hover{background:#2ba048}
 </style>
 </head>
 <body>
@@ -50,150 +51,69 @@ a.back:hover{color:var(--accent)}
   <div class="subtitle">Manage Inventory</div>
 
   <!-- ADD ITEM -->
-  <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:1px;margin-bottom:4px">Add New Item</div>
-  <div style="font-size:11px;color:var(--light);letter-spacing:1px;margin-bottom:4px">Upload a bag photo + details to add it to the shop</div>
+  <div class="section-title">➕ Add New Bag</div>
+  <div class="section-sub">Text Jhonnatan to add a new item to the shop</div>
 
-  <label>Item Name</label>
-  <input type="text" id="add-name" placeholder="e.g. Coach Leather Shoulder Bag">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text">Create a Stripe payment link for the new bag at <a href="https://dashboard.stripe.com" target="_blank" style="color:var(--accent)">dashboard.stripe.com</a></div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text">Take a photo of the bag on a clean background</div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text">Text Jhonnatan the photo + this message:<br><br>
+    <strong>NEW BAG: [name] | [$price] | [stripe link]</strong><br><br>
+    Example: NEW BAG: Coach Tote Bag | $45 | https://buy.stripe.com/abc123</div>
+  </div>
 
-  <label>Price</label>
-  <input type="text" id="add-price" placeholder="e.g. $45">
-
-  <label>Category</label>
-  <select id="add-cat">
-    <option>HANDBAGS</option>
-    <option>TOTES</option>
-    <option>CLUTCHES</option>
-    <option>CROSSBODY</option>
-    <option>BACKPACKS</option>
-    <option>WALLETS</option>
-    <option>ACCESSORIES</option>
-  </select>
-
-  <label>Stripe Buy Link</label>
-  <input type="text" id="add-link" placeholder="https://buy.stripe.com/...">
-
-  <label>Bag Photo</label>
-  <input type="file" id="add-img" accept="image/*" onchange="previewImg(this)">
-  <div class="preview-wrap" id="preview-wrap"><img id="img-preview" src="" alt="Preview"></div>
-
-  <button class="btn" id="add-btn" onclick="addItem()">Add to Shop →</button>
-  <div class="spinner" id="add-spinner">Adding item, please wait...</div>
-  <div class="msg" id="add-msg"></div>
+  <a class="imessage-btn" href="sms:+12818441734&body=NEW%20BAG%3A%20%5Bname%5D%20%7C%20%5B%24price%5D%20%7C%20%5Bstripe%20link%5D">
+    📱 Text Jhonnatan to Add Item
+  </a>
 
   <hr class="divider">
 
   <!-- REMOVE SOLD ITEM -->
-  <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:1px;margin-bottom:4px">Remove Sold Item</div>
-  <div style="font-size:11px;color:var(--light);letter-spacing:1px;margin-bottom:4px">Paste the Stripe buy link of the bag that sold</div>
+  <div class="section-title">✅ Mark Item as Sold</div>
+  <div class="section-sub">When a bag sells, text Jhonnatan to remove it from the shop</div>
 
-  <label>Stripe Buy Link (of sold item)</label>
-  <input type="text" id="rm-link" placeholder="https://buy.stripe.com/...">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text">Find the sold item's Stripe payment link (check your Stripe dashboard or the product card)</div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text">Text Jhonnatan:<br><br>
+    <strong>SOLD: [stripe link]</strong><br><br>
+    Example: SOLD: https://buy.stripe.com/abc123</div>
+  </div>
 
-  <button class="btn danger" id="rm-btn" onclick="removeItem()">Mark as Sold & Remove →</button>
-  <div class="spinner" id="rm-spinner">Removing item, please wait...</div>
-  <div class="msg" id="rm-msg"></div>
+  <a class="imessage-btn" href="sms:+12818441734&body=SOLD%3A%20%5Bpaste%20stripe%20link%20here%5D">
+    📱 Text Jhonnatan Item Sold
+  </a>
+
+  <hr class="divider">
+
+  <div class="section-title">📦 View Orders</div>
+  <div class="section-sub">See who bought what and manage shipments</div>
+  <a class="btn" href="https://dashboard.stripe.com/payments" target="_blank">Open Stripe Dashboard →</a>
 
   <a class="back" href="https://mybestlifeshop.store">← Back to shop</a>
 </div>
 
 <script>
-const API = "https://6a07ce0bd5944f632f6f429a.base44.app/api/functions/shopManager";
-const PWD = "mybestlife2026";
-
+const PWD="mybestlife2026";
 function login(){
-  if(document.getElementById('pwd').value === PWD){
+  if(document.getElementById('pwd').value===PWD){
     document.getElementById('login-card').style.display='none';
     document.getElementById('admin-card').style.display='block';
   } else {
-    const e = document.getElementById('pwd-err');
+    const e=document.getElementById('pwd-err');
     e.style.display='block';
     setTimeout(()=>e.style.display='none',3000);
   }
-}
-
-function previewImg(input){
-  if(input.files && input.files[0]){
-    const r=new FileReader();
-    r.onload=e=>{
-      document.getElementById('img-preview').src=e.target.result;
-      document.getElementById('preview-wrap').style.display='block';
-    };
-    r.readAsDataURL(input.files[0]);
-  }
-}
-
-function showMsg(id,text,type){
-  const el=document.getElementById(id);
-  el.textContent=text; el.className='msg '+type; el.style.display='block';
-  setTimeout(()=>el.style.display='none',6000);
-}
-
-async function addItem(){
-  const name=document.getElementById('add-name').value.trim();
-  const price=document.getElementById('add-price').value.trim();
-  const cat=document.getElementById('add-cat').value;
-  const link=document.getElementById('add-link').value.trim();
-  const file=document.getElementById('add-img').files[0];
-  if(!name||!price||!link||!file) return showMsg('add-msg','Please fill all fields and select a photo.','error');
-  
-  const btn=document.getElementById('add-btn');
-  const spin=document.getElementById('add-spinner');
-  btn.disabled=true; spin.style.display='block';
-  
-  const r=new FileReader();
-  r.onload=async e=>{
-    try{
-      const res=await fetch(API,{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({action:'add',name,price,category:cat,link,image:e.target.result})
-      });
-      if(res.ok){
-        showMsg('add-msg','✅ Added! Will appear on shop in ~1 minute.','success');
-        document.getElementById('add-name').value='';
-        document.getElementById('add-price').value='';
-        document.getElementById('add-link').value='';
-        document.getElementById('add-img').value='';
-        document.getElementById('preview-wrap').style.display='none';
-      } else {
-        const t=await res.text();
-        showMsg('add-msg','❌ Error: '+t,'error');
-      }
-    } catch(err){
-      showMsg('add-msg','❌ Connection error. Try again.','error');
-    }
-    btn.disabled=false; spin.style.display='none';
-  };
-  r.readAsDataURL(file);
-}
-
-async function removeItem(){
-  const link=document.getElementById('rm-link').value.trim();
-  if(!link) return showMsg('rm-msg','Please paste the Stripe buy link.','error');
-  
-  const btn=document.getElementById('rm-btn');
-  const spin=document.getElementById('rm-spinner');
-  btn.disabled=true; spin.style.display='block';
-  
-  try{
-    const res=await fetch(API,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({action:'remove',link})
-    });
-    if(res.ok){
-      showMsg('rm-msg','✅ Item removed from shop!','success');
-      document.getElementById('rm-link').value='';
-    } else if(res.status===404){
-      showMsg('rm-msg','❌ Item not found. Check the link.','error');
-    } else {
-      showMsg('rm-msg','❌ Error removing item.','error');
-    }
-  } catch(err){
-    showMsg('rm-msg','❌ Connection error.','error');
-  }
-  btn.disabled=false; spin.style.display='none';
 }
 </script>
 </body>
